@@ -9,6 +9,9 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <h1>Seja bem vindo a página home </h1>
+
+<!-- {{$id}} as duplas chaves é uma tag de impressão como se fosse php echo $id?> -->
+    <h1>Seja bem vindo {{$id}}  a página home </h1>
+
 </body>
 </html>
