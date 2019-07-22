@@ -12,5 +12,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        // database seeders na hora que vc rodar o db:seeders você vai chamar a seeder CriarProduto
+        // e aí tem que colocar o comando no terminal: php artisan db:seed
+        $this->call(CriarProdutoSeeder::class);
     }
 }

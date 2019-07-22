@@ -53,3 +53,10 @@ Route::get('/aluno', 'AlunoController@listarAluno');
 
 //para deletar o aluno
 Route::get('/aluno/deletar/{id}', 'AlunoController@deletarAluno');
+
+//tem todas as funcionalidade de todas as rotas que precisamos para autenticar
+Auth::routes();
+//nessa rota home é o que da início a quase tudo.
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/produtos', 'ProdutoController@listarTodos');

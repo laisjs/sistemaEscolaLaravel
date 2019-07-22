@@ -15,6 +15,8 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+     //são atributos,- quais atributos podemos preencher(se eu colocar 3 colunas mesmo tendo 25, o larável só pode mexer nesses campos definidos)
     protected $fillable = [
         'name', 'email', 'password',
     ];
@@ -24,6 +26,7 @@ class User extends Authenticatable
      *
      * @var array
      */
+    //garantir que os atributos não vão ser expostos a todo momento, a gente garante que eles estarão criptografados
     protected $hidden = [
         'password', 'remember_token',
     ];
@@ -33,6 +36,7 @@ class User extends Authenticatable
      *
      * @var array
      */
+    //ele recebe uma data e garante que essa data vai estar no formato do banco.
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];

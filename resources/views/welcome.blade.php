@@ -65,13 +65,18 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+        <!-- existe a rota login? Se tiver ele exibe a mensagem -->
             @if (Route::has('login'))
                 <div class="top-right links">
+                <!-- e pergunta se tem uma autenticaçao -->
                     @auth
+                    <!-- se ele tiver autenticado eu vou enviar ele pra home -->
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
+                        <!-- a gente pode dar apelidos pra uma rota no route tem que voltar na nas rotas e dar o apelido ->register na rota correspondente-->
 
+                        
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
                         @endif
